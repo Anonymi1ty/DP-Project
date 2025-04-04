@@ -1,5 +1,11 @@
 - [x] 实现SumDP算法
+  - [x] 证明SumDP算法的理论分析和实验误差匹配（在notebook中有具体解释）
+
 - [ ] 进行实验评估
+  - [ ] 找三个kaggle数据集，导入进行error评估
+  - [ ] 实现拉普拉斯算法
+  - [ ] 对两个算法进行误差分析
+
 
 
 
@@ -11,14 +17,20 @@ DP PROJECT
 ├─ error_evaluation
 │  └─ SumDP_eva.py（误差分析）
 ├─ notebook_test
-│  ├─ SumDP_error.ipynb（示例）
+│  └─ SumDP_error.ipynb（示例）
 ├─ sum_dp_module.py（sum_dp算法）
 ├─ docs/
 └─ README.md
 
 ```
 
+`sum_dp_module.py`文件中的`SumDP class`是算法具体实现
 
+`error_evaluation`文件下的`SumDP_eva.py`是误差分析代码实现
+
+`SumDP_error.ipynb`: notebook中写了详细的调用计算示例，调用可以查看
+
+> 后续实验代码你们可以自行调整一下，保证易读就行（我这边整理的是error_evaluation文件下实现的是Evaluation的具体代码）
 
 ## 后半部分实现细节
 
@@ -29,7 +41,7 @@ DP PROJECT
    - **拉普拉斯机制（Laplace Mechanism）：**
       对于求和问题，直接在真实总和上添加尺度为 U/ε 的拉普拉斯噪声。
    - **选定技术（例如SumDP协议）：**
-      根据我们的设计，在用户端对数据进行分区（例如对数域分割），在各个子区间上分别执行BaseSumDP，然后在分析器端使用噪声敏感的阈值选择方法得到一个剪切阈值τ，再聚合所有子区间的噪声和，得到最终求和结果。其理论误差为 O(Max(D)·ln(log U)/ε)。
+      根据我们的设计，在用户端对数据进行分区（例如对数域分割），在各个子区间上分别执行BaseSumDP，然后在分析器端使用噪声敏感的阈值选择方法得到一个剪切阈值τ，再聚合所有子区间的噪声和，得到最终求和结果。其理论误差为 $O(Max(D)·ln(log U)/ε)$ 
 3. **实验设置与评价指标**
    - 对每个数据集，在不同的隐私预算ε（例如0.2、1、5等）下运行两种机制，并重复多次（例如50次实验）以统计平均误差。
    - 记录评价指标，如绝对误差、相对误差等。
