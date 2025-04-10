@@ -13,14 +13,42 @@
 
 ```
 DP PROJECT
-├─ algorithm
-├─ error_evaluation
-│  └─ SumDP_eva.py（误差分析）
-├─ notebook_test
-│  └─ SumDP_error.ipynb（示例）
-├─ sum_dp_module.py（sum_dp算法）
-├─ docs/
-└─ README.md
+│   README.md
+│   
+├───algorithm
+│   │   laplace_module.py (new added)
+│   │   sum_dp_module.py
+│   │   __init__.py
+│   │
+│   ├───error_evaluation
+│   │   │   laplace_eva.py (new added)
+│   │   │   SumDP_eva.py
+│   │   │   __init__.py
+│   │   │
+│   │   └───__pycache__
+│   │           laplace_eva.cpython-311.pyc
+│   │           SumDP_eva.cpython-311.pyc
+│   │           __init__.cpython-311.pyc
+│   │
+│   ├───notebook_test
+│   │       errors_compare.ipynb (new added)
+│   │       SumDP_error.ipynb
+│   │
+│   └───__pycache__
+│           sum_dp_module.cpython-311.pyc
+│           __init__.cpython-311.pyc
+│
+├───datasets 
+│       insurance.csv
+│       loan_data.csv
+│       readme.md
+│       StudentsPerformance.csv
+│
+└───docs
+        差分隐私下的和估计(证明部分和公式设计).md
+        差分隐私下的和估计.pdf
+        论文解释.md
+        论文解释.pdf
 
 ```
 
