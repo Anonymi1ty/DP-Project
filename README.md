@@ -85,9 +85,9 @@ DP PROJECT
    - laplace代码实现部分done, see in tree structure
    - 误差分析部分done, see in tree structure
    - translate all comments into english, except `SumDP_error.ipynb`and `docs folder`
-   - datasets readme [] 
-   - needs to check the error bound for laplace []
-   - needs to generate report[]
-   - merge branch []
+   - [ ] datasets readme
+   - [ ] needs to check the error bound for laplace 
+   - [ ] needs to generate report
+   - [ ] merge branch 
 
 
