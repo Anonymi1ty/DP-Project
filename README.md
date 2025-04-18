@@ -78,3 +78,16 @@ DP PROJECT
    - 分析实验结果时，重点说明在大多数实际数据中，Max(D)远小于U，因此SumDP协议能利用这一点获得较小的噪声量，误差明显低于直接采用拉普拉斯机制的 O(U/ε) 误差。
    - 同时，讨论当ε变化时，两种方法的误差随之变化的趋势是否符合理论（例如：误差均呈现 1/ε 衰减）。
    - 如果可能，进一步讨论不同数据集之间由于数据分布不同（例如数据的偏斜、稀疏性）对误差的影响，验证理论上剪切机制在实例自适应性方面的优势。
+
+
+   ## 后半部分comment
+
+   - laplace代码实现部分done, see in tree structure
+   - 误差分析部分done, see in tree structure
+   - translate all comments into english, except `SumDP_error.ipynb`and `docs folder`
+   - datasets readme [ ] 
+   - needs to check the error bound for laplace [ ]
+   - needs to generate report [ ]
+   - merge branch [ ]
+
+

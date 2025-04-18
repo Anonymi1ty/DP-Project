@@ -3,13 +3,13 @@ import math
 
 class LaplaceExperiment:
     """
-    实验类，用于计算标准 Laplace 机制的实验误差以及理论误差上界
+    Experiment class for evaluating the empirical and theoretical error of the standard Laplace mechanism.
     """
     def __init__(self, laplace_instance, x_list):
         """
-        参数:
-            laplace_instance: LaplaceMechanism 类的实例
-            x_list: 实验数据列表
+        Parameters:
+            laplace_instance: An instance of the LaplaceMechanism class
+            x_list: List of input data values for the experiment
         """
         self.algorithm = laplace_instance
         self.x_list = x_list
@@ -19,7 +19,7 @@ class LaplaceExperiment:
     
     def run_experiment(self, n_trials=1000):
         """
-        重复调用 Laplace 机制 n_trials 次，返回平均绝对误差和标准差
+        Repeatedly run the Laplace mechanism n_trials times and return the average absolute error.
         """
         errors = []
         for _ in range(n_trials):
@@ -29,8 +29,7 @@ class LaplaceExperiment:
     
     def theoretical_error_bound(self, beta=0.05):
         """
-        Laplace 机制的理论误差上界（常见置信范围：~95%）
+        Compute the theoretical upper bound on the Laplace mechanism’s error 
+        under a typical confidence level (~95%).
         """
         return self.sensitivity / self.epsilon * math.log(1 / beta)
-
-   
