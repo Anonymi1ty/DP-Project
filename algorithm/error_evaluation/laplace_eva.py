@@ -27,11 +27,10 @@ class LaplaceExperiment:
             errors.append(abs(noisy_sum - self.true_sum))
         return np.mean(errors)
     
-    def theoretical_error_bound(self):
+    def theoretical_error_bound(self, beta=0.05):
         """
         Laplace 机制的理论误差上界（常见置信范围：~95%）
-        通常估算为：√2 * sensitivity / ε （或更宽松上界：2 * sensitivity / ε）
         """
-        return math.sqrt(2) * self.sensitivity / self.epsilon  # or use 2 * sens / ε for a looser bound
+        return self.sensitivity / self.epsilon * math.log(1 / beta)
 
    
