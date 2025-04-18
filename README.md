@@ -6,6 +6,16 @@
   - [x] 实现拉普拉斯算法
   - [x] 对两个算法进行误差分析
 
+## 后半部分comment
+
+   - laplace代码实现部分done, see in tree structure
+   - 误差分析部分done, see in tree structure, `errors_compare.ipynb`
+   - datasets folder contains datasets used in experiment 
+   - translate all comments into english, except `SumDP_error.ipynb`and `docs folder`
+   - [ ] report
+   - [ ] merge branch 
+
+
 
 
 
@@ -80,14 +90,4 @@ DP PROJECT
    - 如果可能，进一步讨论不同数据集之间由于数据分布不同（例如数据的偏斜、稀疏性）对误差的影响，验证理论上剪切机制在实例自适应性方面的优势。
 
 
-   ## 后半部分comment
-
-   - laplace代码实现部分done, see in tree structure
-   - 误差分析部分done, see in tree structure
-   - translate all comments into english, except `SumDP_error.ipynb`and `docs folder`
-   - [ ] datasets readme
-   - [ ] needs to check the error bound for laplace 
-   - [ ] needs to generate report
-   - [ ] merge branch 
-
-
+   
