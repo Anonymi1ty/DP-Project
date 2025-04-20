@@ -1,25 +1,5 @@
-- [x] 实现SumDP算法
-  - [x] 证明SumDP算法的理论分析和实验误差匹配（在notebook中有具体解释）
 
-- [x] 进行实验评估
-  - [x] 找三个kaggle数据集，导入进行error评估
-  - [x] 实现拉普拉斯算法
-  - [x] 对两个算法进行误差分析
-
----
-
->后半部分comment
-
-   - [x] laplace代码实现部分done, see in tree structure
-   - [x] 误差分析部分done, see in tree structure, `errors_compare.ipynb`
-   - [x] datasets folder contains datasets used in experiment 
-   - [x] translate all comments into english, except `SumDP_error.ipynb`and `docs folder`
-   - [ ] report
-   - [x] merge branch 
-
-
-
-## Envorment
+## Environment
 
 ```bash
 pip install -r requirements.txt
@@ -33,17 +13,17 @@ DP_PROJECT
 │   requirements.txt
 │
 ├── algorithm
-│   ├── laplace_module.py       (new)
+│   ├── laplace_module.py       # contains the core `Laplace` class implementation
 │   ├── sum_dp_module.py        # contains the core `SumDP` class implementation
 │   └── __init__.py
 │
 ├── error_evaluation
-│   ├── laplace_eva.py          (new)
+│   ├── laplace_eva.py          # error-analysis baseline code
 │   ├── SumDP_eva.py            # error‐analysis code
 │   └── __init__.py
 │
 ├── notebook_test
-│   ├── errors_compare.ipynb    (new)  # comparison of Laplace vs. SumDP errors
+│   ├── errors_compare.ipynb    # comparison of Laplace vs. SumDP errors
 │   └── SumDP_error.ipynb       # detailed SumDP usage examples
 │
 ├── datasets
